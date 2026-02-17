@@ -4,14 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ADI.FX - Video Editor Portfolio</title>
-    
-    <!-- Font Awesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!-- External CSS -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
+    <!-- VIDEO MODAL LIGHTBOX -->
+    <div class="modal-overlay" id="videoModal">
+        <div class="modal-box">
+            <button class="modal-close" id="modalClose" aria-label="Close video">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="modal-video-wrap">
+                <iframe id="modalIframe" src="" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            </div>
+            <div class="modal-info">
+                <h3 id="modalTitle"></h3>
+                <p id="modalDesc"></p>
+            </div>
+        </div>
+    </div>
+
     <!-- Social Media Links -->
     <div class="social-links">
         <a href="https://wa.me/8237497933" target="_blank" title="WhatsApp">
@@ -20,7 +33,7 @@
         <a href="https://instagram.com/aditya.fxz" target="_blank" title="Instagram">
             <i class="fab fa-instagram"></i>
         </a>
-        <a href="realadityafx@gmail.com" title="Email">
+        <a href="mailto:realadityafx@gmail.com" title="Email">
             <i class="fas fa-envelope"></i>
         </a>
     </div>
@@ -29,9 +42,9 @@
     <header class="header">
         <nav class="nav">
             <a href="#home">HOME</a>
-            <a href="#podcast">PODCAST / SIMPLE STYLE</a>
+            <a href="#podcast">PODCAST</a>
             <a href="#typography">TYPOGRAPHY</a>
-            <a href="#motion">MOTION GRAPHICS</a>
+            <a href="#motion">MOTION</a>
             <a href="#about">ABOUT</a>
             <a href="#contact">CONTACT</a>
         </nav>
@@ -52,91 +65,158 @@
         </div>
     </section>
 
-    <!-- Podcast Section -->
+    <!-- ═══════════════════════════════════════
+         PODCAST / SIMPLE STYLE SECTION
+    ═══════════════════════════════════════ -->
     <section id="podcast" class="section">
-        <h2 class="section-title">Podcast / Simple Style Edit</h2>
-        <div class="grid">
-            <div class="card podcast-card">
-                <div class="card-image-wrapper">
-                    <iframe src="https://drive.google.com/file/d/1CbnWBdJBR-Z981d--rwRnS-u4sC1HcR7/preview" 
-                            allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        <h2 class="section-title">Podcast / Simple Style</h2>
+
+        <div class="glass-category-card">
+            <div class="glass-card-header">
+                <div class="glass-card-icon">
+                    <i class="fas fa-microphone"></i>
                 </div>
-                <div class="card-content">
-                    <h3 class="card-title">Podcast Edit</h3>
-                    <p class="card-description">Professional podcast editing with clean audio mixing, dynamic video cuts, and engaging visual storytelling. Multi-camera production with smooth transitions and animated graphics.</p>
+                <div>
+                    <h3 class="glass-card-label">Podcast &amp; Simple Style Edits</h3>
+                    <p class="glass-card-sublabel">Professional podcast production, clean audio, dynamic cuts</p>
                 </div>
+            </div>
+
+            <div class="video-thumb-grid" id="podcast-grid">
+
+                <!-- ── VIDEO ITEM ── -->
+                <div class="video-thumb"
+                     data-src="https://drive.google.com/file/d/1CbnWBdJBR-Z981d--rwRnS-u4sC1HcR7/preview"
+                     data-title="Podcast Edit"
+                     data-desc="Professional podcast editing with clean audio mixing, dynamic video cuts, and engaging visual storytelling. Multi-camera production with smooth transitions and animated graphics."
+                     data-thumb="https://drive.google.com/thumbnail?id=1CbnWBdJBR-Z981d--rwRnS-u4sC1HcR7&sz=w600">
+                    <div class="thumb-img-wrap">
+                        <img src="https://drive.google.com/thumbnail?id=1CbnWBdJBR-Z981d--rwRnS-u4sC1HcR7&sz=w600" alt="Podcast Edit" loading="lazy" onerror="this.style.display='none'; this.parentElement.querySelector('.thumb-fallback').style.display='flex'">
+                        <div class="thumb-fallback"><i class="fas fa-play-circle"></i></div>
+                        <div class="thumb-play-btn"><i class="fas fa-play"></i></div>
+                        <div class="thumb-overlay"></div>
+                    </div>
+                    <div class="thumb-label">Podcast Edit</div>
+                </div>
+
+                <!-- ── ADD MORE PODCAST VIDEOS BELOW ── -->
+                <!-- Copy the block above, change data-src, data-title, data-desc, data-thumb, and the img src to your new Google Drive file ID -->
+
             </div>
         </div>
     </section>
 
-    <!-- Typography Section -->
+    <!-- ═══════════════════════════════════════
+         TYPOGRAPHY SECTION
+    ═══════════════════════════════════════ -->
     <section id="typography" class="section">
         <h2 class="section-title">Typography Edit</h2>
-        <div class="grid">
-            <!-- Typography Video 1 -->
-            <div class="card">
-                <div class="card-image-wrapper">
-                    <iframe src="https://drive.google.com/file/d/1EXWxTu3FYR3fXtwfeQgHc4haFR0IzaBx/preview" 
-                            allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+        <div class="glass-category-card">
+            <div class="glass-card-header">
+                <div class="glass-card-icon">
+                    <i class="fas fa-font"></i>
                 </div>
-                <div class="card-content">
-                    <h3 class="card-title">Typography 1</h3>
-                    <p class="card-description">Clean and modern typography design with smooth animations and elegant text presentations.</p>
+                <div>
+                    <h3 class="glass-card-label">Kinetic Typography</h3>
+                    <p class="glass-card-sublabel">Animated text, dynamic type design, expressive typography</p>
                 </div>
             </div>
-            <!-- Typography Video 2 -->
-            <div class="card">
-                <div class="card-image-wrapper">
-                    <iframe src="https://drive.google.com/file/d/17w98MFld8YRCYeQa4f2NPLzbih_m9LyI/preview" 
-                            allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+            <div class="video-thumb-grid" id="typography-grid">
+
+                <div class="video-thumb"
+                     data-src="https://drive.google.com/file/d/1EXWxTu3FYR3fXtwfeQgHc4haFR0IzaBx/preview"
+                     data-title="Typography 1"
+                     data-desc="Clean and modern typography design with smooth animations and elegant text presentations."
+                     data-thumb="https://drive.google.com/thumbnail?id=1EXWxTu3FYR3fXtwfeQgHc4haFR0IzaBx&sz=w600">
+                    <div class="thumb-img-wrap">
+                        <img src="https://drive.google.com/thumbnail?id=1EXWxTu3FYR3fXtwfeQgHc4haFR0IzaBx&sz=w600" alt="Typography 1" loading="lazy" onerror="this.style.display='none'; this.parentElement.querySelector('.thumb-fallback').style.display='flex'">
+                        <div class="thumb-fallback"><i class="fas fa-play-circle"></i></div>
+                        <div class="thumb-play-btn"><i class="fas fa-play"></i></div>
+                        <div class="thumb-overlay"></div>
+                    </div>
+                    <div class="thumb-label">Typography 1</div>
                 </div>
-                <div class="card-content">
-                    <h3 class="card-title">Typography 2</h3>
-                    <p class="card-description">Creative typography edits featuring dynamic text movements and visually striking type designs.</p>
+
+                <div class="video-thumb"
+                     data-src="https://drive.google.com/file/d/17w98MFld8YRCYeQa4f2NPLzbih_m9LyI/preview"
+                     data-title="Typography 2"
+                     data-desc="Creative typography edits featuring dynamic text movements and visually striking type designs."
+                     data-thumb="https://drive.google.com/thumbnail?id=17w98MFld8YRCYeQa4f2NPLzbih_m9LyI&sz=w600">
+                    <div class="thumb-img-wrap">
+                        <img src="https://drive.google.com/thumbnail?id=17w98MFld8YRCYeQa4f2NPLzbih_m9LyI&sz=w600" alt="Typography 2" loading="lazy" onerror="this.style.display='none'; this.parentElement.querySelector('.thumb-fallback').style.display='flex'">
+                        <div class="thumb-fallback"><i class="fas fa-play-circle"></i></div>
+                        <div class="thumb-play-btn"><i class="fas fa-play"></i></div>
+                        <div class="thumb-overlay"></div>
+                    </div>
+                    <div class="thumb-label">Typography 2</div>
                 </div>
+
+                <!-- ── ADD MORE TYPOGRAPHY VIDEOS BELOW ── -->
+
             </div>
         </div>
     </section>
 
-    <!-- Motion Graphics Section -->
+    <!-- ═══════════════════════════════════════
+         MOTION GRAPHICS SECTION
+    ═══════════════════════════════════════ -->
     <section id="motion" class="section">
         <h2 class="section-title">Motion Graphics</h2>
-        <div class="grid">
-            <div class="card">
-                <div class="card-image-wrapper">
-                    <iframe src="https://drive.google.com/file/d/1vyZBc-5R89Pjgs-LgBrFvxT6zsCMvSWD/preview" 
-                            allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+        <div class="glass-category-card">
+            <div class="glass-card-header">
+                <div class="glass-card-icon">
+                    <i class="fas fa-film"></i>
                 </div>
-                <div class="card-content">
-                    <h3 class="card-title">Motion Design 1</h3>
-                    <p class="card-description">Sleek brand animations, explainer videos with custom illustrations, and eye-catching motion graphics for social media. Professional logo animations and brand identity motion design.</p>
+                <div>
+                    <h3 class="glass-card-label">Motion Graphics & VFX</h3>
+                    <p class="glass-card-sublabel">Brand animations, logo motion, social media graphics</p>
                 </div>
+            </div>
+
+            <div class="video-thumb-grid" id="motion-grid">
+
+                <div class="video-thumb"
+                     data-src="https://drive.google.com/file/d/1vyZBc-5R89Pjgs-LgBrFvxT6zsCMvSWD/preview"
+                     data-title="Motion Design 1"
+                     data-desc="Sleek brand animations, explainer videos with custom illustrations, and eye-catching motion graphics for social media. Professional logo animations and brand identity motion design."
+                     data-thumb="https://drive.google.com/thumbnail?id=1vyZBc-5R89Pjgs-LgBrFvxT6zsCMvSWD&sz=w600">
+                    <div class="thumb-img-wrap">
+                        <img src="https://drive.google.com/thumbnail?id=1vyZBc-5R89Pjgs-LgBrFvxT6zsCMvSWD&sz=w600" alt="Motion Design 1" loading="lazy" onerror="this.style.display='none'; this.parentElement.querySelector('.thumb-fallback').style.display='flex'">
+                        <div class="thumb-fallback"><i class="fas fa-play-circle"></i></div>
+                        <div class="thumb-play-btn"><i class="fas fa-play"></i></div>
+                        <div class="thumb-overlay"></div>
+                    </div>
+                    <div class="thumb-label">Motion Design 1</div>
+                </div>
+
+                <div class="video-thumb"
+                     data-src="https://drive.google.com/file/d/1Ma6AHatd2jB4C_cnyNCCI5gjcTHIdXBZ/preview"
+                     data-title="Motion Design 2"
+                     data-desc="Sleek brand animations, explainer videos with custom illustrations, and eye-catching motion graphics for social media. Professional logo animations and brand identity motion design."
+                     data-thumb="https://drive.google.com/thumbnail?id=1Ma6AHatd2jB4C_cnyNCCI5gjcTHIdXBZ&sz=w600">
+                    <div class="thumb-img-wrap">
+                        <img src="https://drive.google.com/thumbnail?id=1Ma6AHatd2jB4C_cnyNCCI5gjcTHIdXBZ&sz=w600" alt="Motion Design 2" loading="lazy" onerror="this.style.display='none'; this.parentElement.querySelector('.thumb-fallback').style.display='flex'">
+                        <div class="thumb-fallback"><i class="fas fa-play-circle"></i></div>
+                        <div class="thumb-play-btn"><i class="fas fa-play"></i></div>
+                        <div class="thumb-overlay"></div>
+                    </div>
+                    <div class="thumb-label">Motion Design 2</div>
+                </div>
+
+                <!-- ── ADD MORE MOTION GRAPHICS VIDEOS BELOW ── -->
+
             </div>
         </div>
     </section>
 
-        <section id="motion" class="section">
-        <h2 class="section-title">Motion Graphics 2</h2>
-        <div class="grid">
-            <div class="card">
-                <div class="card-image-wrapper">
-                    <iframe src="https://drive.google.com/file/d/1Ma6AHatd2jB4C_cnyNCCI5gjcTHIdXBZ/preview" 
-                            allow="autoplay; encrypted-media" allowfullscreen></iframe>
-                </div>
-                <div class="card-content">
-                    <h3 class="card-title">Motion Design</h3>
-                    <p class="card-description">Sleek brand animations, explainer videos with custom illustrations, and eye-catching motion graphics for social media. Professional logo animations and brand identity motion design.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    
     <!-- About Section -->
     <section id="about" class="section">
         <h2 class="section-title">About Me</h2>
         <div class="about-content">
             <div class="about-logo">
-                <!-- Your logo image -->
                 <img src="https://i.imgur.com/0rjoLka.jpeg" alt="ADI.FX Logo">
             </div>
             <div class="about-text">
@@ -150,9 +230,7 @@
     <!-- Contact Section -->
     <section id="contact" class="section">
         <h2 class="section-title">Contact Me</h2>
-        <p class="contact-intro">
-            I'd love to hear from you! Whether you have a question, suggestion, or just want to connect, feel free to reach out.
-        </p>
+        <p class="contact-intro">I'd love to hear from you! Whether you have a question, suggestion, or just want to connect, feel free to reach out.</p>
         <form class="contact-form" action="https://formspree.io/f/mpqqalod" method="POST">
             <div class="form-group">
                 <label for="name">Your Name</label>
@@ -176,22 +254,14 @@
 
     <!-- Footer -->
     <footer class="footer">
-        <!-- Mobile Social Links -->
         <div class="footer-social">
-            <a href="https://wa.me/8237497933" target="_blank" title="WhatsApp">
-                <i class="fab fa-whatsapp"></i>
-            </a>
-            <a href="https://instagram.com/aditya.fxz" target="_blank" title="Instagram">
-                <i class="fab fa-instagram"></i>
-            </a>
-            <a href="mailto:realadityafx@gmail.com" title="Email">
-                <i class="fas fa-envelope"></i>
-            </a>
+            <a href="https://wa.me/8237497933" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://instagram.com/aditya.fxz" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="mailto:realadityafx@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
         </div>
-        <p>© 2024 ADI.FX - ALL RIGHTS RESERVED</p>
+        <p>© 2024 ADI.FX — ALL RIGHTS RESERVED</p>
     </footer>
 
-    <!-- External JavaScript -->
     <script src="script.js"></script>
 </body>
 </html>
